@@ -4,6 +4,9 @@ En este repositorio haremos las practicas para programación para ciencia de dat
 PONLE EL NOMBRE DE TU EQUIPO AQUI PARA QUE YO SEPA CUAL TEMA TE TOCO
 
 EQUIPO:14-LUMINA
+Integrantes: 
+Carrillo Perez Mariana
+Dominguez Celis Aketzalli Valeria
 
 TEMA: Citas Medicas
 
