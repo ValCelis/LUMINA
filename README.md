@@ -14,7 +14,7 @@ TEMA: Citas Medicas
 Observaciones Repositorio:
 1- No tiene requirements.txt
 2- No tiene la carpeta datos/ 
-3- No tiene las carpetas practica1 a practica6
+3- No tiene las carpetas practica1 a practica6`
 4- No tiene la carpeta proyecto/
 
 Listo ya estan los archivos requerido 
