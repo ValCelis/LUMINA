@@ -19,3 +19,13 @@ Observaciones Repositorio:
 
 Listo ya estan los archivos requeridos.
 
+
+---
+
+## Observaciones del profesor
+
+### 22-sep-2026
+
+**Estatus:** 4/6 de la estructura esperada.
+
+Agregaron la carpeta `datos/`, bien. Les falta: en `practica1` a `practica6` crear la carpeta `resultados/` (ya tienen `src/`); y en `proyecto/` crear la carpeta `src/` (ya tienen `resultados/` y `datos/`).
