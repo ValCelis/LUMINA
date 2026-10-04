@@ -1,0 +1,39 @@
+RESUMEN DE LA PRACTICA
+Archivo: citas_medicas-ruido_100000.csv
+Pareja: Valeria Celis y Mariana Carrillo
+Seed: 100000
+
+Dimensiones
+Filas: 103000
+Columnas: 9
+Nombres de columnas: email, edad_paciente, diagnostico_breve, telefono, tiempo_espera_min, direccion, id, especialidad, timestamp
+
+Primeras 5 filas
+email | edad_paciente | diagnostico_breve | telefono | tiempo_espera_min | direccion | id | especialidad | timestamp
+mariagonzalez21@yahoo.com | 68.0 | Se recomienda seguimiento en cuatro semanas | 06-1437-6966 | 48.0 | Calle Hidalgo #1447, Col. Del Valle, Tijuana | 558028462f | Pediatria | 2023-10-27 11:45:28
+renatatorres28@hotmail.com | 71.0 | Se solicitan estudios complementarios para confirmar diagnostico | 64-7043-5158 | 81.0 | Calle Constitucion #79, Col. Las Aguilas, Queretaro | 3698a8f35c | Oftalmologia | 2024-03-16 08:32:30
+renata.lopez44@yahoo.com | 490.0 | Paciente presenta evolucion favorable respecto a consulta anterior | 94-1699-7326 | 41.0 | Calle Juarez #1245, Col. Del Valle, Merida | e70a194266 | Nutricion | 2023-12-01 07:12:47
+luis.martinez34@live.com | 0.0 | Se recomienda seguimiento en cuatro semanas | 90-9474-9440 | 15.0 |  | 5cce695764 | Dermatologia | 2023-07-02 17:46:39
+maria.jimenez23@outlook.com | 28.0 | Se solicitan estudios complementarios para confirmar diagnostico | 21-1388-8373 | 24.0 | Calle Insurgentes #1690, Col. Las Aguilas, Puebla | d7b2cc3f1d |  | 2024-07-13 17:19:41
+
+Columna categórica: especialidad
+Valores únicos: 28
+Valor más frecuente: Pediatria (13426 apariciones)
+
+Columna numérica: tiempo_espera_min
+Valores válidos (no vacíos): 98875
+Mínimo: -760.0
+Máximo: 9840.0
+
+Calidad de datos
+Celdas vacías totales: 32959
+Celdas vacías por columna:
+  email: 4111
+  edad_paciente: 4126
+  diagnostico_breve: 4126
+  telefono: 4107
+  tiempo_espera_min: 4125
+  direccion: 4133
+  id: 0
+  especialidad: 4126
+  timestamp: 4105
