@@ -43,3 +43,5 @@ Agregaron la carpeta `datos/`, bien. Les falta: en `practica1` a `practica6` cre
 **Estatus:** 6/6 de la estructura esperada.
 
 Siguen con la estructura completa, sin pendientes.
+
+Holaa, practica 1 terminada
