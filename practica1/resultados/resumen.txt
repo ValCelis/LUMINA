@@ -1,7 +1,7 @@
 RESUMEN DE LA PRACTICA
 Archivo: citas_medicas-ruido_100000.csv
 Pareja: Valeria Celis y Mariana Carrillo
-Seed: 100000
+Seed: 21
 
 Dimensiones
 Filas: 103000
