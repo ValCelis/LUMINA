@@ -6,8 +6,8 @@ PONLE EL NOMBRE DE TU EQUIPO AQUI PARA QUE YO SEPA CUAL TEMA TE TOCO
 EQUIPO:14-LUMINA
 
 Integrantes: 
-Carrillo Perez Mariana
-Dominguez Celis Aketzalli Valeria
+Carrillo Perez Mariana.
+Dominguez Celis Aketzalli Valeria.
 
 TEMA: Citas Medicas
 
@@ -44,4 +44,7 @@ Agregaron la carpeta `datos/`, bien. Les falta: en `practica1` a `practica6` cre
 
 Siguen con la estructura completa, sin pendientes.
 
-Holaa, practica 1 terminada
+
+###SEMILLA21
+CITAS MEDICAS.
+Holaa, practica 1 terminada.
