@@ -27,6 +27,27 @@ Listo ya estan los archivos requeridos.
 
 ## Observaciones del profesor
 
+### 13-oct-2026 — Correcciones de la Práctica 1
+
+**Calificación de P1: 81 → 90 / 100.**
+
+**Corrigieron sus tres observaciones y además la nota opcional** (commit del 12-oct). Son el
+único equipo del grupo que atendió también lo que era solo una sugerencia:
+
+1. Ya abre con `=== RESUMEN DEL DATASET ===`.
+2. Ya están los cinco encabezados de sección: `--- Dimensiones ---`,
+   `--- Primeras 5 filas ---`, `--- Columna categórica: ... ---`,
+   `--- Columna numérica: ... ---` y `--- Calidad de datos ---`.
+3. La semilla ya dice **21**.
+4. Aplicaron el `.strip()` que se les sugirió sin que contara para la calificación: ahora
+   reportan 21 valores únicos y `Pediatria` con 13724, idéntico a la solución de referencia.
+
+Su `resumen.txt` quedó alineado con la referencia en todos los campos. Lo único que sobra es
+una línea `Errores numéricos: 0` que no está en el formato pedido; quítenla para que la
+salida sea exactamente la del enunciado.
+
+**Cómo se aplicó el reconocimiento.** Nueve de los diez equipos que tenían observaciones las atendieron entre el 8 y el 12 de octubre. A quien corrigió y tenía 90 o más, su práctica queda en **99**; a quien tenía menos de 90, en **90**. El 100 se reserva para quien entregó bien desde la primera vez. En la tabla de calificaciones del curso su celda aparece como `anterior/vigente`: el primer número es la entrega original y **el segundo es el que cuenta**.
+
 ### Práctica 1 — evaluación (8-oct-2026, 00:51 h)
 
 **Calificación: 81 / 100**
