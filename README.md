@@ -83,3 +83,6 @@ Siguen con la estructura completa, sin pendientes.
 ### SEMILLA21
 **CITAS MEDICAS.**
 Holaa, practica 1 terminada.
+
+Practica1 corregida
+
