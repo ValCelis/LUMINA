@@ -1,7 +1,6 @@
 import json
 import os
 
-
 RUTA_ENTRADA = "datos/citas_medicas-ruido_100000.csv"
 RUTA_SALIDA = "practica2/resultados/analisis_python.json"
 
@@ -14,10 +13,7 @@ COLUMNA_NUMERICA_1 = "tiempo_espera_min"
 COLUMNA_NUMERICA_2 = "edad_paciente"
 
 
-#FUNG
-
 def a_float(texto):
-    """Convierte un texto a float; devuelve None si no es valido."""
     try:
         return float(texto)
     except (ValueError, TypeError):
@@ -25,16 +21,13 @@ def a_float(texto):
 
 
 def es_convertible(texto):
-    """Indica si un texto representa un numero valido."""
     return a_float(texto) is not None
 
 
 def leer_datos(ruta):
-    """Lee el archivo separado por | y devuelve una lista de diccionarios."""
     with open(ruta, "r", encoding="utf-8") as archivo:
         encabezado = archivo.readline().rstrip("\r\n")
         columnas = [columna.strip() for columna in encabezado.split("|")]
-
         datos = []
 
         for linea in archivo:
@@ -49,7 +42,6 @@ def leer_datos(ruta):
                 valores.extend([""] * (len(columnas) - len(valores)))
 
             fila = dict(zip(columnas, valores[:len(columnas)]))
-
             fila = {
                 columna: valor.strip()
                 for columna, valor in fila.items()
@@ -60,10 +52,7 @@ def leer_datos(ruta):
     return columnas, datos
 
 
-# CATEG
-
 def valores_unicos(datos, columna):
-    """Devuelve los valores no vacios y unicos en orden alfabetico."""
     valores = set()
 
     for fila in datos:
@@ -76,7 +65,6 @@ def valores_unicos(datos, columna):
 
 
 def conteo_por_categoria(datos, columna):
-    """Cuenta cuantas veces aparece cada categoria no vacia."""
     conteo = {}
 
     for fila in datos:
@@ -92,7 +80,6 @@ def conteo_por_categoria(datos, columna):
 
 
 def top_3_categorias(conteo):
-    """Ordena por mayor frecuencia y, en empates, alfabeticamente."""
     ordenadas = sorted(
         conteo.items(),
         key=lambda par: (-par[1], par[0])
@@ -104,25 +91,15 @@ def top_3_categorias(conteo):
     ]
 
 
-#ESTADISTICAS NUM
-
 def obtener_numeros(datos, columna):
-    """Filtra primero los valores validos y despues los convierte a float."""
     textos = [fila.get(columna, "").strip() for fila in datos]
-
-    textos_validos = list(
-        filter(es_convertible, textos)
-    )
-
-    numeros = list(
-        map(a_float, textos_validos)
-    )
+    textos_validos = list(filter(es_convertible, textos))
+    numeros = list(map(a_float, textos_validos))
 
     return numeros
 
 
 def mediana(numeros):
-    """Calcula la mediana para cantidades pares o impares."""
     if len(numeros) == 0:
         return None
 
@@ -133,15 +110,12 @@ def mediana(numeros):
     if n % 2 == 1:
         resultado = ordenados[medio]
     else:
-        resultado = (
-            ordenados[medio - 1] + ordenados[medio]
-        ) / 2
+        resultado = (ordenados[medio - 1] + ordenados[medio]) / 2
 
     return round(resultado, 2)
 
 
 def estadisticas(datos, columna):
-    """Calcula cantidad valida, minimo, maximo, promedio y mediana."""
     numeros = obtener_numeros(datos, columna)
 
     if len(numeros) == 0:
@@ -165,10 +139,7 @@ def estadisticas(datos, columna):
     }
 
 
-#PROM DE CATEGORIA
-
 def promedio_por_categoria(datos, categorica, numerica):
-    """Calcula el promedio numerico para cada categoria valida."""
     grupos = {}
 
     for fila in datos:
@@ -184,17 +155,12 @@ def promedio_por_categoria(datos, categorica, numerica):
     promedios = {}
 
     for categoria, numeros in grupos.items():
-        promedios[categoria] = round(
-            sum(numeros) / len(numeros), 2
-        )
+        promedios[categoria] = round(sum(numeros) / len(numeros), 2)
 
     return promedios
 
 
-##FILTRAR
-
 def percentil(numeros, p):
-    """Obtiene el percentil usando el indice int(p * n)."""
     if len(numeros) == 0:
         return None
 
@@ -208,7 +174,6 @@ def percentil(numeros, p):
 
 
 def analizar_filtrado(datos, columna):
-    """Cuenta los registros que superan el percentil 90."""
     numeros = obtener_numeros(datos, columna)
     umbral = percentil(numeros, 0.9)
 
@@ -220,10 +185,7 @@ def analizar_filtrado(datos, columna):
             "porcentaje": 0.0
         }
 
-    cumplen = list(
-        filter(lambda numero: numero > umbral, numeros)
-    )
-
+    cumplen = list(filter(lambda numero: numero > umbral, numeros))
     cantidad = len(cumplen)
 
     porcentaje = round(
@@ -237,8 +199,6 @@ def analizar_filtrado(datos, columna):
         "porcentaje": porcentaje
     }
 
-
-###PRINC.PROG
 
 def main():
     columnas, datos = leer_datos(RUTA_ENTRADA)
@@ -278,45 +238,32 @@ def main():
         "archivo": NOMBRE_ARCHIVO,
         "pareja": PAREJA,
         "seed": SEED,
-
         "valores_unicos_categorica": {
             "columna": COLUMNA_CATEGORICA,
             "n_valores_unicos": len(unicos),
             "valores": unicos
         },
-
         "conteo_por_categoria": conteo,
-
         "categoria_mas_frecuente": mas_frecuente,
-
         "top_3_categorias": top_3_categorias(conteo),
-
         "estadisticas_numerica_1": estadisticas(
             datos, COLUMNA_NUMERICA_1
         ),
-
         "estadisticas_numerica_2": estadisticas(
             datos, COLUMNA_NUMERICA_2
         ),
-
         "promedio_por_categoria": promedio_por_categoria(
             datos,
             COLUMNA_CATEGORICA,
             COLUMNA_NUMERICA_1
         ),
-
         "filtrado": analizar_filtrado(
             datos, COLUMNA_NUMERICA_1
         )
     }
 
-    # Crear la carpeta de salida si no existe.
-    os.makedirs(
-        os.path.dirname(RUTA_SALIDA),
-        exist_ok=True
-    )
+    os.makedirs(os.path.dirname(RUTA_SALIDA), exist_ok=True)
 
-    # Guardar JSON.
     with open(RUTA_SALIDA, "w", encoding="utf-8") as archivo:
         json.dump(
             resultado,
