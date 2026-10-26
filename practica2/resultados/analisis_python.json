@@ -1,0 +1,118 @@
+{
+  "archivo": "citas_medicas-ruido_100000.csv",
+  "pareja": "Valeria Celis y Mariana Carrillo",
+  "seed": 21,
+  "valores_unicos_categorica": {
+    "columna": "especialidad",
+    "n_valores_unicos": 21,
+    "valores": [
+      "CARDIOLOGIA",
+      "Cardiologia",
+      "DERMATOLOGIA",
+      "Dermatologia",
+      "NUTRICION",
+      "Nutricion",
+      "OFTALMOLOGIA",
+      "Oftalmologia",
+      "PEDIATRIA",
+      "PSICOLOGIA",
+      "Pediatria",
+      "Psicologia",
+      "TRAUMATOLOGIA",
+      "Traumatologia",
+      "cardiologia",
+      "dermatologia",
+      "nutricion",
+      "oftalmologia",
+      "pediatria",
+      "psicologia",
+      "traumatologia"
+    ]
+  },
+  "conteo_por_categoria": {
+    "Pediatria": 13724,
+    "Oftalmologia": 13430,
+    "Nutricion": 13502,
+    "Dermatologia": 13542,
+    "Traumatologia": 13426,
+    "psicologia": 274,
+    "Psicologia": 13573,
+    "Cardiologia": 13666,
+    "PSICOLOGIA": 266,
+    "TRAUMATOLOGIA": 255,
+    "NUTRICION": 290,
+    "pediatria": 307,
+    "oftalmologia": 318,
+    "traumatologia": 300,
+    "nutricion": 302,
+    "cardiologia": 318,
+    "CARDIOLOGIA": 292,
+    "dermatologia": 268,
+    "PEDIATRIA": 272,
+    "OFTALMOLOGIA": 278,
+    "DERMATOLOGIA": 271
+  },
+  "categoria_mas_frecuente": {
+    "valor": "Pediatria",
+    "conteo": 13724
+  },
+  "top_3_categorias": [
+    {
+      "valor": "Pediatria",
+      "conteo": 13724
+    },
+    {
+      "valor": "Cardiologia",
+      "conteo": 13666
+    },
+    {
+      "valor": "Psicologia",
+      "conteo": 13573
+    }
+  ],
+  "estadisticas_numerica_1": {
+    "columna": "tiempo_espera_min",
+    "n_validos": 98875,
+    "min": -760.0,
+    "max": 9840.0,
+    "promedio": 72.7,
+    "mediana": 42.0
+  },
+  "estadisticas_numerica_2": {
+    "columna": "edad_paciente",
+    "n_validos": 98874,
+    "min": -740.0,
+    "max": 9120.0,
+    "promedio": 73.82,
+    "mediana": 43.0
+  },
+  "promedio_por_categoria": {
+    "Pediatria": 72.08,
+    "Oftalmologia": 73.48,
+    "Nutricion": 73.05,
+    "Dermatologia": 74.26,
+    "Traumatologia": 72.23,
+    "psicologia": 65.64,
+    "Psicologia": 71.71,
+    "Cardiologia": 71.98,
+    "PSICOLOGIA": 100.58,
+    "TRAUMATOLOGIA": 68.86,
+    "NUTRICION": 66.94,
+    "pediatria": 89.85,
+    "oftalmologia": 71.5,
+    "traumatologia": 67.98,
+    "nutricion": 66.71,
+    "cardiologia": 69.78,
+    "CARDIOLOGIA": 73.14,
+    "dermatologia": 73.06,
+    "PEDIATRIA": 87.46,
+    "OFTALMOLOGIA": 105.11,
+    "DERMATOLOGIA": 75.62
+  },
+  "filtrado": {
+    "condicion": "tiempo_espera_min > 70.0",
+    "umbral_usado": 70.0,
+    "n_registros_que_cumplen": 9863,
+    "porcentaje": 9.98
+  }
+}
