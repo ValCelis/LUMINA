@@ -27,6 +27,39 @@ Listo ya estan los archivos requeridos.
 
 ## Observaciones del profesor
 
+### Práctica 2 — evaluación (27-oct-2026)
+
+**Calificación: 90 / 100**
+
+Entregada el **26-oct-2026 a las 20:48**, dentro del plazo (la entrega cerraba el lun 26-oct), así que no lleva penalización por retraso.
+
+**Lo que destaca:** 13 funciones y el cálculo correcto en **todos** los campos: los números coinciden con la referencia sin una sola diferencia. Lo único que los separó del 100 fueron los nombres.
+
+**Criterios cubiertos al 100 %:** Requisitos de Git (3+ commits, rama integrada); Requisitos de código (5 funciones, `lambda`, `map`/`filter`); Encabezado del JSON: archivo, pareja, seed; `valores_unicos_categorica`; `conteo_por_categoria`; `categoria_mas_frecuente`; `top_3_categorias`; `promedio_por_categoria`; `filtrado` (percentil 90).
+
+**Observaciones:**
+
+1. El script se llama `analisis2.py` y debe llamarse **`analisis_python.py`**. El enunciado pide los nombres literales y lo advertía justo porque en P1 dos equipos perdieron puntos por esto.
+2. Dentro de `estadisticas_numerica_1` y `estadisticas_numerica_2` nombraron los campos `n_validos`, `min` y `max`; el enunciado los pide como **`n_valores_validos`**, **`minimo`** y **`maximo`**. Los valores son correctos —coinciden exacto con la referencia—, así que esos campos se contaron a mitad de punto: lo que falló es el nombre del campo, no el cálculo. Conviene corregirlo porque de P3 en adelante la revisión del JSON es automática y busca esos nombres.
+
+**Desglose:**
+
+| Criterio | Obtenido | Máximo |
+|---|:---:|:---:|
+| Nombres exactos de los entregables | 5 | 10 |
+| Requisitos de Git (3+ commits, rama integrada) | 8 | 8 |
+| Requisitos de código (5 funciones, `lambda`, `map`/`filter`) | 12 | 12 |
+| Encabezado del JSON: archivo, pareja, seed | 6 | 6 |
+| `valores_unicos_categorica` | 10 | 10 |
+| `conteo_por_categoria` | 10 | 10 |
+| `categoria_mas_frecuente` | 6 | 6 |
+| `top_3_categorias` | 8 | 8 |
+| `estadisticas_numerica_1` (con mediana) | 9 | 12 |
+| `estadisticas_numerica_2` (con mediana) | 6 | 8 |
+| `promedio_por_categoria` | 6 | 6 |
+| `filtrado` (percentil 90) | 4 | 4 |
+| **Total** | **90** | **100** |
+
 ### 13-oct-2026 — Correcciones de la Práctica 1
 
 **Calificación de P1: 81 → 90 / 100.**
@@ -80,11 +113,12 @@ Entregada el **3-oct-2026 a las 22:39**, dentro del plazo (la entrega cerraba el
 | Columna numérica_1 (nombre, válidos, mín, máx) | 13 | 13 |
 | Calidad de datos (celdas vacías) | 5 | 5 |
 | **Total** | **81** | **100** |
-### 22-sep-2026
 
-**Estatus:** 4/6 de la estructura esperada.
+### 26-sep-2026
 
-Agregaron la carpeta `datos/`, bien. Les falta: en `practica1` a `practica6` crear la carpeta `resultados/` (ya tienen `src/`); y en `proyecto/` crear la carpeta `src/` (ya tienen `resultados/` y `datos/`).
+**Estatus:** 6/6 de la estructura esperada.
+
+Siguen con la estructura completa, sin pendientes.
 
 ### 23-sep-2026
 
@@ -94,12 +128,11 @@ Agregaron la carpeta `datos/`, bien. Les falta: en `practica1` a `practica6` cre
 
 📖 **Práctica 1 ya está disponible.** La encontrarán en `labs/P1/P1_setup_reconocimiento.md`, dentro del repositorio del profesor: https://github.com/ESCOMLCD/pcd202701/blob/main/labs/P1/P1_setup_reconocimiento.md — léanla completa antes de empezar a programar, ahí está todo lo que deben hacer, el formato exacto de `resumen.txt` y la fecha de entrega (mar 6-oct).
 
-### 26-sep-2026
+### 22-sep-2026
 
-**Estatus:** 6/6 de la estructura esperada.
+**Estatus:** 4/6 de la estructura esperada.
 
-Siguen con la estructura completa, sin pendientes.
-
+Agregaron la carpeta `datos/`, bien. Les falta: en `practica1` a `practica6` crear la carpeta `resultados/` (ya tienen `src/`); y en `proyecto/` crear la carpeta `src/` (ya tienen `resultados/` y `datos/`).
 
 ### SEMILLA21
 **CITAS MEDICAS.**
@@ -107,9 +140,7 @@ Holaa, practica 1 terminada.
 
 Practica1 corregida
 
-
 ### 26 / 10 / 2026
 **PRACTICA2 TERMINADA**
 SEMILLA21
 **CITAS MÉDICAS**
-
