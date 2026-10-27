@@ -107,3 +107,9 @@ Holaa, practica 1 terminada.
 
 Practica1 corregida
 
+
+### 26 / 10 / 2026
+**PRACTICA2 TERMINADA**
+SEMILLA21
+**CITAS MÉDICAS**
+
