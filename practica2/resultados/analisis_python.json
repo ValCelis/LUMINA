@@ -72,17 +72,17 @@
   ],
   "estadisticas_numerica_1": {
     "columna": "tiempo_espera_min",
-    "n_validos": 98875,
-    "min": -760.0,
-    "max": 9840.0,
+    "n_valores_validos": 98875,
+    "minimo": -760.0,
+    "maximo": 9840.0,
     "promedio": 72.7,
     "mediana": 42.0
   },
   "estadisticas_numerica_2": {
     "columna": "edad_paciente",
-    "n_validos": 98874,
-    "min": -740.0,
-    "max": 9120.0,
+    "n_valores_validos": 98874,
+    "minimo": -740.0,
+    "maximo": 9120.0,
     "promedio": 73.82,
     "mediana": 43.0
   },

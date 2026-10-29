@@ -1,3 +1,4 @@
+
 import json
 import os
 
@@ -110,7 +111,9 @@ def mediana(numeros):
     if n % 2 == 1:
         resultado = ordenados[medio]
     else:
-        resultado = (ordenados[medio - 1] + ordenados[medio]) / 2
+        resultado = (
+            ordenados[medio - 1] + ordenados[medio]
+        ) / 2
 
     return round(resultado, 2)
 
@@ -131,9 +134,9 @@ def estadisticas(datos, columna):
 
     return {
         "columna": columna,
-        "n_validos": len(numeros),
-        "min": minimo,
-        "max": maximo,
+        "n_valores_validos": len(numeros),
+        "minimo": minimo,
+        "maximo": maximo,
         "promedio": promedio,
         "mediana": valor_mediana
     }
@@ -155,7 +158,9 @@ def promedio_por_categoria(datos, categorica, numerica):
     promedios = {}
 
     for categoria, numeros in grupos.items():
-        promedios[categoria] = round(sum(numeros) / len(numeros), 2)
+        promedios[categoria] = round(
+            sum(numeros) / len(numeros), 2
+        )
 
     return promedios
 

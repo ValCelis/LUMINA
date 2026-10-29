@@ -142,5 +142,10 @@ Practica1 corregida
 
 ### 26 / 10 / 2026
 **PRACTICA2 TERMINADA**
+
+### 28/10/26
+**PRACTICA2 CORREGIDA**
+
 SEMILLA21
 **CITAS MÉDICAS**
+
