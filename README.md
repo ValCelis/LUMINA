@@ -27,6 +27,22 @@ Listo ya estan los archivos requeridos.
 
 ## Observaciones del profesor
 
+### 2-nov-2026 — Correcciones de la Práctica 2
+
+**Calificación de P2: 90 → 99 / 100.**
+
+**Corrigieron sus dos observaciones** (commit del 28-oct, 23:39). Renombraron
+`analisis2.py` a **`analisis_python.py`**, y dentro de `estadisticas_numerica_1` y
+`estadisticas_numerica_2` cambiaron los nombres de los campos a **`n_valores_validos`**,
+**`minimo`** y **`maximo`**. Los valores ya eran correctos, así que con el cambio de
+nombres su JSON coincide campo por campo con la referencia en los doce criterios.
+
+Esto les va a servir de inmediato: **de P3 en adelante la revisión del JSON es
+automática** y busca esos nombres literales. Un campo bien calculado con el nombre
+equivocado no se puede dar por bueno.
+
+**Cómo se aplicó el reconocimiento.** Los seis equipos que tenían observaciones en la P2 las atendieron entre el 27 y el 28 de octubre. A quien corrigió y tenía 90 o más, su práctica queda en **99**; a quien tenía menos de 90, en **90**. El 100 se reserva para quien entregó bien desde la primera vez. En la tabla de calificaciones del curso su celda aparece como `anterior/vigente`: el primer número es la entrega original y **el segundo es el que cuenta**.
+
 ### Práctica 2 — evaluación (27-oct-2026)
 
 **Calificación: 90 / 100**
