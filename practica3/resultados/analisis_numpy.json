@@ -44,9 +44,9 @@
     },
     "benchmark": {
         "n_filas": 98875,
-        "tiempo_bucle_python_seg": 0.01,
-        "tiempo_numpy_seg": 0.0,
-        "factor_velocidad": null,
+        "tiempo_bucle_python_seg": 0.012484,
+        "tiempo_numpy_seg": 0.000254,
+        "factor_velocidad": 49.12,
         "operacion_medida": "calcular media y desviacion estandar"
     }
 }

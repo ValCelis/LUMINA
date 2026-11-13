@@ -107,6 +107,7 @@ def detectar_outliers(valores):
     }
 
 
+
 def benchmark(valores):
     if valores.size == 0:
         raise ValueError(
@@ -115,10 +116,9 @@ def benchmark(valores):
 
     lista = valores.tolist()
     n = len(lista)
+    repeticiones = 10
 
-    # Python puro: calcular media y desviación estándar
-    inicio_python = time.perf_counter()
-
+    # Comprobar equivalencia antes de medir los tiempos
     suma = 0.0
 
     for valor in lista:
@@ -133,36 +133,67 @@ def benchmark(valores):
 
     desviacion_python = (suma_cuadrados / n) ** 0.5
 
-    tiempo_python = time.perf_counter() - inicio_python
-
-    # NumPy: calcular media y desviación estándar
-    inicio_numpy = time.perf_counter()
-
     media_numpy = np.mean(valores)
     desviacion_numpy = np.std(valores)
 
-    tiempo_numpy = time.perf_counter() - inicio_numpy
-
-    # Comprobar que ambos métodos producen resultados equivalentes
     coinciden = np.allclose(
         [media_python, desviacion_python],
         [media_numpy, desviacion_numpy]
     )
 
-    # Redondear los tiempos para el JSON
-    tiempo_python_json = round(float(tiempo_python), 2)
-    tiempo_numpy_json = round(float(tiempo_numpy), 2)
+    if not coinciden:
+        raise ValueError(
+            "Los resultados de Python y NumPy no coinciden."
+        )
 
-    # Evitar división entre cero
-    if coinciden and tiempo_numpy_json > 0:
-        factor = round(float(tiempo_python / tiempo_numpy), 2)
+    # Medir Python puro
+    inicio_python = time.perf_counter()
+
+    for _ in range(repeticiones):
+        suma = 0.0
+
+        for valor in lista:
+            suma += valor
+
+        media = suma / n
+
+        suma_cuadrados = 0.0
+
+        for valor in lista:
+            suma_cuadrados += (valor - media) ** 2
+
+        desviacion = (suma_cuadrados / n) ** 0.5
+
+    tiempo_python = (
+        time.perf_counter() - inicio_python
+    ) / repeticiones
+
+    # Medir NumPy
+    inicio_numpy = time.perf_counter()
+
+    for _ in range(repeticiones):
+        media = np.mean(valores)
+        desviacion = np.std(valores)
+
+    tiempo_numpy = (
+        time.perf_counter() - inicio_numpy
+    ) / repeticiones
+
+    if tiempo_numpy > 0:
+        factor = round(
+            float(tiempo_python / tiempo_numpy), 2
+        )
     else:
         factor = None
 
     return {
         "n_filas": int(n),
-        "tiempo_bucle_python_seg": tiempo_python_json,
-        "tiempo_numpy_seg": tiempo_numpy_json,
+        "tiempo_bucle_python_seg": round(
+            float(tiempo_python), 6
+        ),
+        "tiempo_numpy_seg": round(
+            float(tiempo_numpy), 6
+        ),
         "factor_velocidad": factor,
         "operacion_medida": "calcular media y desviacion estandar"
     }
@@ -283,11 +314,12 @@ def main():
             resultado["n_valores_validos"]
         )
 
-    print("\n¿Los resultados del benchmark coinciden?")
-    print(resultado_benchmark["resultados_coinciden"]
-          if "resultados_coinciden" in resultado_benchmark
-          else "Revisa los resultados del benchmark en el código.")
-
-
+    print("\nBenchmark:")
+    print("Los resultados de Python y NumPy coinciden.")
+    print(
+    "Factor de velocidad:",
+    resultado_benchmark["factor_velocidad"]
+)
+    
 if __name__ == "__main__":
     main()
