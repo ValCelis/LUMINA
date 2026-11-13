@@ -1,0 +1,52 @@
+{
+    "archivo": "citas_medicas-ruido_100000.csv",
+    "pareja": "Valeria Celis y Mariana Carrillo",
+    "seed": 21,
+    "numerica_1": {
+        "columna": "tiempo_espera_min",
+        "n_valores_validos": 98875,
+        "media": 72.7,
+        "desviacion_estandar": 198.0,
+        "minimo": -760.0,
+        "maximo": 9840.0,
+        "mediana": 42.0,
+        "percentil_25": 31.0,
+        "percentil_75": 55.0
+    },
+    "numerica_2": {
+        "columna": "edad_paciente",
+        "n_valores_validos": 98874,
+        "media": 73.82,
+        "desviacion_estandar": 193.42,
+        "minimo": -740.0,
+        "maximo": 9120.0,
+        "mediana": 43.0,
+        "percentil_25": 30.0,
+        "percentil_75": 57.0
+    },
+    "outliers_numerica_1": {
+        "metodo": "desviacion_estandar_3",
+        "limite_inferior": -521.3,
+        "limite_superior": 666.69,
+        "n_outliers": 645,
+        "porcentaje": 0.65,
+        "outliers_minimo": -760.0,
+        "outliers_maximo": 9840.0
+    },
+    "outliers_numerica_2": {
+        "metodo": "desviacion_estandar_3",
+        "limite_inferior": -506.44,
+        "limite_superior": 654.09,
+        "n_outliers": 898,
+        "porcentaje": 0.91,
+        "outliers_minimo": -740.0,
+        "outliers_maximo": 9120.0
+    },
+    "benchmark": {
+        "n_filas": 98875,
+        "tiempo_bucle_python_seg": 0.01,
+        "tiempo_numpy_seg": 0.0,
+        "factor_velocidad": null,
+        "operacion_medida": "calcular media y desviacion estandar"
+    }
+}
