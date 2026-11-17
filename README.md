@@ -27,6 +27,30 @@ Listo ya estan los archivos requeridos.
 
 ## Observaciones del profesor
 
+### Práctica 3 — evaluación (16-nov-2026)
+
+**Calificación: 100 / 100**
+
+Entregada el **12-nov-2026 a las 19:21**, dentro del plazo (la entrega cerraba el vie 13-nov), así que no lleva penalización por retraso.
+
+**Práctica correcta.** Los 9 criterios salieron completos: el resultado coincide campo por campo con la solución de referencia de su tema y su semilla —conteos exactos y valores numéricos dentro de tolerancia— y el código cumple todos los requisitos. Nada que corregir.
+
+**Lo que destaca:** De **99** en la P2 a **100**, y entregada el 12-nov, antes del cierre. Ocho funciones y los 40 campos del JSON correctos.
+
+**Desglose:**
+
+| Criterio | Obtenido | Máximo |
+|---|:---:|:---:|
+| Nombres exactos de los entregables | 8 | 8 |
+| Requisitos de Git (3+ commits, rama integrada) | 8 | 8 |
+| Requisitos de código (NumPy, sin pandas) | 12 | 12 |
+| Encabezado del JSON: archivo, pareja, seed | 6 | 6 |
+| `numerica_1` (8 estadísticos) | 20 | 20 |
+| `numerica_2` (8 estadísticos) | 16 | 16 |
+| `outliers_numerica_1` (±3 desviaciones) | 12 | 12 |
+| `outliers_numerica_2` (±3 desviaciones) | 10 | 10 |
+| `benchmark` (NumPy vs bucle puro) | 8 | 8 |
+| **Total** | **100** | **100** |
 ### 2-nov-2026 — Correcciones de la Práctica 2
 
 **Calificación de P2: 90 → 99 / 100.**
